@@ -1,6 +1,7 @@
 .header{
     height: 61px;
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -42,7 +43,7 @@
 
 .search-bar{
     flex: 1;
-    height: 37px;
+    height: 40.5px;
     width: 10px;
     padding-left: 10px;
     font-size: 16px;
@@ -72,7 +73,7 @@
 }
 
 .search-button{
-    height: 41px;
+    height: 44.5px;
     width: 66px;
     background-color: rgb(240, 240, 240);
     border-style: solid;
