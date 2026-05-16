@@ -3,7 +3,7 @@
     left: 0;
     bottom: 0;
     top: 55px;
-    width: 80px;
+    width: 94px;
     z-index: 200;
     padding-top: 10px;
 }
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 100px;
 }
 
 .sidebar-icon:hover{
@@ -22,10 +22,10 @@
 }
 
 .sidebar-icon img{
-    height: 24px;
+    height: 30px;
     margin-bottom: 4px;
 }
 
 .sidebar-icon div{
-    font-size: 10px;
+    font-size: 11px;
 }
