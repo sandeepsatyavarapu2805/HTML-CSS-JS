@@ -1,0 +1,82 @@
+.videos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    padding-bottom: 300px;
+    /* text-decoration: underline; this property uses inheritance to catch all elements in the videos-grid container */
+    /* Inheritance works with text properties like decoration, underline, color, font weigth and font family */
+}
+
+@media (min-width: 530px) and (max-width: 750px) {
+    .videos-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px){
+    .videos-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1299px) {
+    .videos-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1300px){
+    .videos-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.thumbnail-row {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.video-time{
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.video-description-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 50px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.video-author,
+.video-stats {
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+}
+
+.video-author {
+    margin-bottom: 4px;
+}

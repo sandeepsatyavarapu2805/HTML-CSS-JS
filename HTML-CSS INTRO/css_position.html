@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Position Practice</title>
+</head>
+
+<body style="height: 3000px;
+padding-top: 60px;
+padding-left: 120px;
+">
+    <div style="background-color: black;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    z-index: 1;
+    ">Header</div>
+    
+    <!--This position is fixed in the browser window and not on the page-->
+    <div style="background-color: green;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    width: 100px;
+    ">
+        Sidebar
+        <div style="position: absolute;
+        background-color: red;
+        color: white;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+        ">
+            x
+        </div>
+    </div>
+
+    <!--The position absolute is the position fixed on the page itself and can be used on fixed parts of the page only-->
+    <div style="position: absolute;
+    background-color: red;
+    color: white;
+    top: 16px;
+    right: 10px;
+    z-index: 2;
+    ">
+        absolute
+    </div>
+
+    <div style="background-color: lightblue;
+    height: 200px;
+    width: 200px;
+    position: static;
+    ">div 1</div>
+
+    <!--The position relative sets the div to accept any absolutely positioned elements on it which are now fixed on the parent element and not on page-->
+    <div style="background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    ">
+        div 2
+        <div style="position: absolute;
+        background-color: black;
+        color: white;
+        bottom: 10px;
+        right: 10px;
+        ">
+            5:00
+        </div>
+    </div>
+</body>
+
+</html>
