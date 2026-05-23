@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comprehensive Form Example</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .inline-group {
+            margin-bottom: 15px;
+        }
+
+        .inline-group label {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>User Registration Portal</h2>
+
+    <!-- Form initializes POST method to an imaginary signup server page -->
+    <form action="/api/signup" method="POST" enctype="multipart/form-data">
+
+        <!-- Group 1: Credentials -->
+        <fieldset>
+            <legend>Account Security</legend>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="e.g., dev_coder99" required>
+            </div>
+
+            <div class="form-group">
+                <label for="useremail">Email Address:</label>
+                <input type="email" id="useremail" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+        </fieldset>
+
+        <!-- Group 2: Personal Profile -->
+        <fieldset>
+            <legend>Personal Profile</legend>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" value="25">
+            </div>
+
+            <!-- Radio Buttons: Shared 'name="gender"' allows only one choice -->
+            <div class="inline-group">
+                <p style="margin: 0 0 5px 0; font-weight: 500;">Gender:</p>
+                <label><input type="radio" name="gender" value="male" checked> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country of Residence:</label>
+                <select id="country" name="country">
+                    <option value="us">United States</option>
+                    <option value="in">India</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+        </fieldset>
+
+        <!-- Group 3: Preferences & Files -->
+        <fieldset>
+            <legend>Preferences & Uploads</legend>
+
+            <!-- Checkboxes: Independent selections -->
+            <div class="inline-group">
+                <p style="margin: 0 0 5px 0; font-weight: 500;">Interests (Select all):</p>
+                <label><input type="checkbox" name="interests" value="coding"> Coding</label>
+                <label><input type="checkbox" name="interests" value="design"> Design</label>
+                <label><input type="checkbox" name="interests" value="marketing"> Marketing</label>
+            </div>
+
+            <div class="form-group">
+                <label for="avatar">Upload Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Short Biography:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </div>
+        </fieldset>
+
+        <!-- Submission Trigger -->
+        <div style="text-align: right;">
+            <button type="submit">Create Account</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

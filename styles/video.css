@@ -8,7 +8,7 @@
     /* Inheritance works with text properties like decoration, underline, color, font weigth and font family */
 }
 
-@media (min-width: 530px) and (max-width: 750px) {
+@media (min-width: 492px) and (max-width: 750px) {
     .videos-grid{
         grid-template-columns: 1fr;
     }
